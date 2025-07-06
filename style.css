@@ -1,0 +1,243 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #1c1c1c;
+  line-height: 1.6;
+  margin: 0;
+  min-height: fit-content;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 60px; /* Match this to your .bottom-banner height */
+}
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #77a8bb;
+  padding: 90px 10px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.hero-text {
+  flex: 1 1 300px;
+  max-width: 600px;
+  padding: 30px 30px 30px 60px;
+}
+
+.hero-text h1 {
+  font-family: 'Cinzel', serif;
+  font-size: 35px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  letter-spacing: 1px;
+  text-align: left;
+}
+
+.hero-text p {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.donation-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.cta-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.cta-box input {
+  padding: 12px;
+  border: none;
+  border-radius: 6px 0 0 6px;
+  font-size: 16px;
+  width: 150px;
+}
+
+.cta-box button {
+  background-color: #ffc907;
+  color: #1c1c1c;
+  font-weight: bold;
+  font-size: 18px;
+  border: none;
+  padding: 15px 28px;
+  border-radius: 0 6px 6px 0;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(28, 61, 79, 0.10);
+  transition: background 0.2s, color 0.2s, transform 0.15s;
+  outline: none;
+}
+
+.cta-box button:hover,
+.cta-box button:focus {
+  background-color: #ffd84d;
+  color: #163040;
+  transform: translateY(-2px) scale(1.03);
+}
+
+.hero-image {
+  flex: 1 1 200px;
+  max-width: none;
+  padding: 10px 20px;
+}
+
+.hero-image img {
+  width: 70%;
+  max-width: 450px;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+}
+
+.image-credit {
+  font-size: 13px;
+  font-weight: normal;
+  color: #e8e8e8;
+  text-align: center;
+}
+
+.banner {
+  width: 100%;
+  background-color: rgba(28, 61, 79, 0.95);
+  display: flex;
+  align-items: center;
+  padding: 12px 32px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.banner-logo {
+  height: 38px;
+  margin-bottom: 6px;
+  margin-right: 0;
+}
+
+.banner-title {
+  color: #fff;
+  font-family: 'Cinzel', serif;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-left: 24px;
+}
+
+.bottom-banner {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(28, 61, 79, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.04);
+  z-index: 100;
+  min-height: 60px;
+}
+
+.bottom-banner .quote {
+  color: #fff;
+  font-family: 'Cinzel', serif;
+  font-style: italic;
+  font-size: 20px;
+  font-weight: normal;
+  margin: 0;
+  padding: 10px 0;
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+}
+
+.quote span {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  display: block;
+  margin-top: 6px;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .hero-text, .hero-image {
+    max-width: 100%;
+    padding: 15px;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  .hero-text p {
+    font-size: 16px;
+  }
+
+  .cta-box {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cta-box input {
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 10px;
+  }
+
+  .cta-box button {
+    width: 100%;
+    border-radius: 6px;
+  }
+
+  .image-credit {
+    font-size: 12px;
+  }
+
+  .bottom-banner .quote {
+    font-size: 18px;
+  }
+
+  .quote span {
+    font-size: 14px;
+  }
+}
+
+
